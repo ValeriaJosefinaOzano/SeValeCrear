@@ -1,0 +1,482 @@
+@font-face {
+    font-family: 'MiFuente';
+    src: url("./Recursos/tipografia/DancingScript-VariableFont_wght.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MiFuente', sans-serif;
+    background-color: #003366; /* Fondo azul marino */
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #000; 
+    border-radius: 50%; 
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #0c0b0b;
+    background-color: #FFD700; 
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    bottom: 50px;
+}
+
+.button:hover {
+    background-color: #FFC107; 
+}
+
+footer {
+    background-color: #FFD700; 
+    color: #003366; 
+    text-align: center;
+    padding: 20px 0;
+    width: 100%; 
+    position: fixed;
+    bottom: -59px;
+}
+
+.formulario {
+    font-size: 24px; 
+    color: #000; 
+    font-family: 'MiFuente';
+    text-shadow: 1px 1px 0 #d4af37, -1px -1px 0 #d4af37, 1px -1px 0 #d4af37, -1px 1px 0 #d4af37; 
+    width: 400px;
+}
+
+.input-texto,
+.input-textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #0a0a0a; 
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px; 
+    color: #000; 
+    font-family: Arial, sans-serif; 
+    margin-bottom: 20px; 
+}
+
+.input-textarea {
+    height: 150px; 
+    resize: none; 
+}
+
+.input-texto::placeholder,
+.input-textarea::placeholder {
+    color: #616161; 
+}
+
+.boton-enviar {
+    background-color: #ffffff; 
+    color: #000000; 
+    border: 2px solid #000000; 
+    padding: 15px 20px; 
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px; 
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 100px;
+}
+
+.boton-enviar:hover {
+    background-color: #ffffff; 
+}
+
+.botones-sociales,
+.grupo-botones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.grupo-botones {
+    display: flex;
+    gap: 10px;
+}
+
+.boton-red {
+    display: inline-block;
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 10px; 
+    position: relative; 
+    top: -10px; 
+}
+
+.boton-red img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.boton-red:hover img {
+    transform: scale(1.1);
+}
+
+.Boton_inicio img {
+    border: 2px solid #FFD700; /* Borde dorado */
+    border-radius: 50%;
+}
+
+.Boton_Acerca_de img {
+    border: 2px solid #FF4500; 
+    border-radius: 50%;
+}
+
+.Boton_portafolio img {
+    border: 2px solid #32CD32; 
+    border-radius: 50%;
+}
+
+.Boton_servicio img {
+    border: 2px solid #32CD32; 
+    border-radius: 50%;
+}
+
+.Boton_contact img {
+    border: 2px solid #1E90FF; 
+    border-radius: 50%;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.boton-mensajes-titulo {
+    text-align: center;
+ 
+    font-size: 48px; 
+    color: #000000; 
+  border-color: #fdc50c;
+  border-radius: 50%;
+    margin: 20px 0;
+    
+}
+
+#contenedor-mensajes {
+    background-color: #fff; 
+    border: 3px solid #000; /* Borde negro */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 8px; 
+}
+
+.mensaje-boton-mensajes {
+    font-size: 20px;
+    color: #000; /* Texto negro */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #d4af37; /* Borde dorado */
+    background-color: #fff; 
+    border-radius: 4px; 
+}
+
+.btn-eliminar {
+    background-color: #fdc50c; 
+    color: #000000; 
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-eliminar:hover {
+    background-color: #ffffff; /* Rojo más oscuro al pasar el ratón */
+}
+
+.imagen-lateral {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: auto;
+}
+
+.imagen-izquierda {
+    left: 10px;
+}
+
+.imagen-derecha {
+    right: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #FFD700; 
+    color: #003366; 
+    width: 100%; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+@font-face {
+    font-family: 'MiFuente';
+    src: url("./Recursos/tipografia/DancingScript-VariableFont_wght.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+   
+    background-color: #003366; 
+    
+}
+
+.logo-container {
+    margin-bottom: 50px;
+}
+
+.logo_contacto {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #000; 
+    border-radius: 50%; 
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.grupo-botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.boton-red {
+    display: inline-block;
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.boton-red img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.boton-red:hover img {
+    transform: scale(1.1);
+}
+
+.boton-mensajes-titulo {
+    text-align: center;
+    font-size: 48px; 
+    color: #000000;
+   
+    margin: 20px 0;
+}
+
+#contenedor-mensajes {
+    background-color: #fff; 
+    border: 3px solid #fdc50c; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 8px; 
+}
+
+.mensaje-boton-mensajes {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #fdc50c; 
+    background-color: #fff; 
+    border-radius: 4px; 
+}
+
+.btn-eliminar {
+    background-color: #ffffff; 
+    color: #000000; 
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-eliminar:hover {
+    background-color: #ffffff; 
+}
+
+.imagen-lateral {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: auto;
+}
+
+.imagen-izquierda {
+    left: 10px;
+}
+
+.imagen-derecha {
+    right: 10px;
+}
+
+@font-face {
+    font-family: 'MiFuente';
+    src: url("./Recursos/tipografia/DancingScript-VariableFont_wght.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MiFuente', sans-serif;
+    background-color: #003366; 
+    color: #000000; 
+  
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh;
+}
+
+#descripcion {
+    text-align: center;
+}
+
+.descripcion-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    
+    text-align: center;
+}
+
+.logo_descripcion {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #000;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+.descripcion-contenido {
+    background-color: #ffffff; 
+    border: 3px solid #000000; 
+    border-radius: 15px; 
+    padding: 20px;
+    max-width: 800px; 
+    margin: 0 auto; 
+    color: #000000; 
+}
+
+.descripcion-contenido p {
+    margin: 20px 0; 
+    font-size: 30px; 
+}
+
+.titulo-dibujos {
+    text-align: center;
+    font-size: 48px; 
+    color: #fdc50c; 
+    text-shadow: 
+    2px 2px 0 #000000,  
+    -2px -2px 0 #000000,
+    2px -2px 0 #000000,
+    -2px 2px 0 #000000;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.dibujos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.button-dibujos {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffffff; 
+    color: #000000; 
+    border: 2px solid #000000; 
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-dibujos:hover {
+    background-color: #fdc50c; 
+    transform: scale(1.1); 
+}
+.bodydibujo {
+    background-image: url('./Recursos/Imagenes/Botones/de/arriba/Valeria'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Dancing Script', cursive; 
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header class="descripcion-contenedor"> 
+        <img src="./Recursos/Imagenes/Logo Valeria.png" alt="Imagen Personalizada" class="logo">
+        <button class="boton-enviar boton-enviar-contacto"> <a href="./index.html">Volver</a></button>
+        
+    </header>
+    <main>
+        <div class="botones-sociales">
+            <a href="https://wa.link/k022fe" target="_blank" class="boton-red">
+                <img src="./Recursos/Imagenes/Iconos/whatsapp.png" alt="WhatsApp">
+            </a>
+            <a href="https://www.instagram.com/se_vale_crear?igsh=MWdjMHBsZ21qZ2hwaQ==" target="_blank" class="boton-red">
+                <img src="./Recursos/Imagenes/Iconos/instagram.png" alt="Instagram">
+            </a>
+        </div>
+        <form id="contact-form" onsubmit="enviarMensaje(event)">
+            
+            <input type="text" id="nombre" class="input-texto" placeholder="Nombre" required>
+
+            
+            <input type="text" id="asunto" class="input-texto" placeholder="Asunto" required>
+
+          
+            <textarea id="mensaje" class="input-textarea" placeholder="Mensaje" required></textarea>
+
+            <button type="submit" class="boton-enviar">Enviar</button>
+        </form>
+    </main>
+    <footer class="fotter_principal">
+        <p>© 2024</p>
+    </footer>
+
+    <script type="text/javascript">
+        function enviarMensaje(event) {
+            event.preventDefault();
+
+            // Capturar los valores del formulario
+            const nombre = document.getElementById('nombre').value;
+            const asunto = document.getElementById('asunto').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            // Guardar el mensaje en la página de mensajes
+            const urlMensajes = 'mensajes.html';
+            localStorage.setItem('mensajeCliente', JSON.stringify({ nombre, asunto, mensaje }));
+            window.location.href = urlMensajes;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mensajes de Clientes</title>
+</head>
+<body>
+    <header class="redes-sociales">
+        <!-- Puedes mantener el contenido del header aquí si es necesario -->
+    </header>
+
+    <main>
+        <h2 class="boton-mensajes-titulo">Mensajes</h2>
+        <div id="contenedor-mensajes">
+            <!-- Los mensajes se insertarán aquí por JavaScript -->
+        </div>
+    </main>
+
+    <img src="./Recursos/Imagenes/Imagenes Laterales/Izquierda.png" alt="Imagen Lateral Izquierda" class="imagen-lateral imagen-izquierda">
+    <img src="./Recursos/Imagenes/Imagenes Laterales/Derecha.png" alt="Imagen Lateral Derecha" class="imagen-lateral imagen-derecha">
+
+    <script type="text/javascript">
+        function eliminarMensaje(boton) {
+            const mensajeContenedor = boton.parentElement;
+            mensajeContenedor.remove();
+        }
+
+        // Mostrar el mensaje guardado en la página de mensajes
+        const mensajeGuardado = localStorage.getItem('mensajeCliente');
+        if (mensajeGuardado) {
+            const mensaje = JSON.parse(mensajeGuardado);
+            const mensajesContainer = document.getElementById('contenedor-mensajes');
+            mensajesContainer.innerHTML = `
+                <div class="mensaje-boton-mensajes">
+                    <p><strong>Nombre:</strong> ${mensaje.nombre}</p>
+                    <p><strong>Asunto:</strong> ${mensaje.asunto}</p>
+                    <p><strong>Mensaje:</strong> ${mensaje.mensaje}</p>
+                    <button class="btn-eliminar" onclick="eliminarMensaje(this)">Eliminar</button>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
