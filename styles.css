@@ -480,3 +480,12 @@ body {
     padding: 0;
     font-family: 'Dancing Script', cursive; 
 }
+
+img, video {
+    width: 500px;
+}
+
+.button-center {
+    display: block;
+    margin-inline: auto;
+}
